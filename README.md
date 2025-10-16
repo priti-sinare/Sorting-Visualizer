@@ -21,10 +21,11 @@ A web-based visualizer that demonstrates how different sorting algorithms work s
 
 ![Demo GIF](assets/demo.gif)
 
-![Screenshot of initial random array](https://i.imgur.com/placeholder1.png)  
+<img width="1919" height="913" alt="image" src="https://github.com/user-attachments/assets/e18e60f5-c7db-4a03-84a4-4838d0a1fa0c" />
 *Initial random array generation (10 elements, speed 10x)*
 
-![Screenshot of sorting in progress](https://i.imgur.com/placeholder2.png)  
+![img2](https://github.com/user-attachments/assets/b9f8e7ae-930d-41a1-a527-f0c254471d8f)
+![img3](https://github.com/user-attachments/assets/c7b100a2-fac4-486a-9419-233e26267854)
 *Merge Sort visualization during execution*
 
 ## Getting Started
