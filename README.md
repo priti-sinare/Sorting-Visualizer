@@ -160,7 +160,3 @@ If you want to contribute:
 - This idea is inspired by many sorting visualizers and algorithm teaching tools
 
 - Thanks to open-source community, tutorials, and algorithm references
-
-- (If any external resource or library used, mention here)
-
-*Note: Screenshots are placeholders based on provided images. Replace with actual URLs from your repo or Imgur for better visuals.*
