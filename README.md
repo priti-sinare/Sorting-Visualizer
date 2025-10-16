@@ -1,70 +1,165 @@
-# Getting Started with Create React App
+# Sorting Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-based visualizer that demonstrates how different sorting algorithms work step by step.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Visualize multiple sorting algorithms such as:
+  - Bubble Sort  
+  - Selection Sort  
+  - Insertion Sort  
+  - Merge Sort  
+  - Quick Sort  
+  - Heap Sort  
+- Real-time animation of array operations (comparisons, swaps, merges, etc.)
+- Adjustable speed / delay between steps
+- Regenerate random array to start fresh
+- (Optional) Pause / resume, reset controls
+- (Optional) Display pseudocode or algorithm steps alongside the visualization
 
-### `npm start`
+## Screenshot / Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Demo GIF](assets/demo.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screenshot of initial random array](https://i.imgur.com/placeholder1.png)  
+*Initial random array generation (10 elements, speed 10x)*
 
-### `npm test`
+![Screenshot of sorting in progress](https://i.imgur.com/placeholder2.png)  
+*Merge Sort visualization during execution*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What you need to run this project locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- A modern web browser (if it’s a web app)
+- (Or) Node.js / npm (if built with JavaScript frameworks)  
+- (Or) Python / local server (if HTML + vanilla JS)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation / Setup
 
-### `npm run eject`
+1. Clone this repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/AkashShelake/Sorting-Visualizer.git
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate into the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd Sorting-Visualizer
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. If dependencies exist (e.g. in package.json), install them:
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Serve / run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - If it’s pure HTML + JS, open index.html in your browser
 
-### Code Splitting
+   - If there's a server script:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+     ```bash
+     npm start
+     ```
 
-### Analyzing the Bundle Size
+   - If using Python’s simple HTTP server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+     ```bash
+     python3 -m http.server
+     ```
+     # then open http://localhost:8000 in browser
 
-### Making a Progressive Web App
+## Usage / Controls
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Generate New Array: creates a new random sequence to sort
 
-### Advanced Configuration
+- Select Algorithm: choose which sorting method to visualize
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Start / Animate: begin the sorting process
 
-### Deployment
+- Speed Control: adjust the animation speed (faster / slower)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Pause / Resume / Reset: (if implemented) control the animation flow
 
-### `npm run build` fails to minify
+The algorithm’s operations (comparisons, swaps) are highlighted visually in the bars / elements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Algorithms Explained
+
+Here is a quick summary of the algorithms supported:
+
+| Algorithm     | Time Complexity (Average) | Space Complexity | Notes                              |
+|---------------|---------------------------|------------------|------------------------------------|
+| Bubble Sort   | O(n²)                     | O(1)             | Simple, inefficient for large n    |
+| Selection Sort| O(n²)                     | O(1)             | Minimal swaps                      |
+| Insertion Sort| O(n²)                     | O(1)             | Good for small / nearly sorted arrays |
+| Merge Sort    | O(n log n)                | O(n)             | Divide-and-conquer, stable         |
+| Quick Sort    | O(n log n)                | O(log n)         | Efficient in practice, but worst-case O(n²) |
+| Heap Sort     | O(n log n)                | O(1)             | Not stable, good worst-case bound  |
+
+You may optionally show pseudocode side-by-side so users can correlate visualization with code.
+
+## Structure (Project Layout)
+
+A possible directory / file structure:
+
+```
+Sorting-Visualizer/
+├── index.html
+├── style.css
+├── main.js
+├── algorithms/
+│   ├── bubble.js
+│   ├── selection.js
+│   ├── insertion.js
+│   ├── merge.js
+│   ├── quick.js
+│   └── heap.js
+└── assets/
+    ├── logo.png
+    └── demo.gif
+```
+
+You can adjust according to your actual file setup.
+
+## Contributing
+
+Contributions are welcome! Some ideas to extend:
+
+- Add more sorting algorithms (e.g. Radix Sort, Shell Sort, Counting Sort)
+
+- Support descending order visualization
+
+- Allow custom user-input arrays
+
+- Add more controls: step-by-step execution, backtracking, speed presets
+
+- Display performance metrics (# comparisons, swaps)
+
+- Improve UI / responsiveness for different screen sizes
+
+If you want to contribute:
+
+1. Fork the repository
+
+2. Create a new branch: git checkout -b feature/your-feature
+
+3. Make changes & commit
+
+4. Push to your fork: git push origin feature/your-feature
+
+5. Create a Pull Request
+
+## Acknowledgements
+
+- This idea is inspired by many sorting visualizers and algorithm teaching tools
+
+- Thanks to open-source community, tutorials, and algorithm references
+
+- (If any external resource or library used, mention here)
+
+*Note: Screenshots are placeholders based on provided images. Replace with actual URLs from your repo or Imgur for better visuals.*
